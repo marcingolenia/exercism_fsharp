@@ -33,6 +33,8 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "KindergartenGarden", "kinde
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Clock", "clock\Clock.fsproj", "{B6C6E689-C0EF-4E17-8C83-255657B657A6}"
 EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RobotSimulator", "robot-simulator\RobotSimulator.fsproj", "{83D9604C-5006-4496-B643-D65395FF5660}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{B6C6E689-C0EF-4E17-8C83-255657B657A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C6E689-C0EF-4E17-8C83-255657B657A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C6E689-C0EF-4E17-8C83-255657B657A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D9604C-5006-4496-B643-D65395FF5660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D9604C-5006-4496-B643-D65395FF5660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D9604C-5006-4496-B643-D65395FF5660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D9604C-5006-4496-B643-D65395FF5660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
