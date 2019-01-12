@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "HelloWorld", "hello-world\HelloWorld.fsproj", "{C1B01FEA-935B-48F8-BEFB-C525FB015768}"
 EndProject
@@ -36,6 +36,11 @@ EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RobotSimulator", "robot-simulator\RobotSimulator.fsproj", "{83D9604C-5006-4496-B643-D65395FF5660}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Allergies", "allergies\Allergies.fsproj", "{CE5EA14B-82BC-480C-BBBB-8E10984EFBC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3AFE9FE7-1683-4B0D-86DA-8B433BE07E47}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
