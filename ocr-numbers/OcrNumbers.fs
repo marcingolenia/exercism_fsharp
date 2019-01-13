@@ -36,9 +36,10 @@ let validate (input: string list) =
     | (IsMultipleOf4, IsMultipleOf3) -> Ok input
     | _ -> Error "Incorrect input"
 
-let processConversion (input: string list) =
+let convertHorizontaly (input: string list) =
   let mutable resultString = ""
-  for i in 0..(input.[0].Length / 3 - 1) do
+  let columnsToConvert = (input.[0].Length / 3 - 1)
+  for i in 0..columnsToConvert do
     let ocrNumber = System.String.Concat(List.concat[
       (input.[0] |> Seq.toList).[(i*3)..(i*3+2)];
       (input.[1] |> Seq.toList).[(i*3)..(i*3+2)];
@@ -46,7 +47,16 @@ let processConversion (input: string list) =
     resultString <- resultString + (ocrNumber |> toStringNumber)
   resultString
 
+let convertVerticallyAndHorizontally (input: string list) =
+  let mutable resultString = ""
+  let rowsToConvert = input.Length / 4 - 1
+  for i in 0..rowsToConvert do
+    if(i > 0) then resultString <- resultString + ","
+    resultString <- resultString + convertHorizontaly input.[i*4..i*4+3]
+  resultString
+
 let convert (input: string list) =
   match (input |> validate) with
-    | Ok _ -> Some(processConversion input)
+    | Ok _ -> Some(convertVerticallyAndHorizontally input)
     | Error _ -> None
+
