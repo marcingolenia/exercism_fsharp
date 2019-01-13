@@ -49,8 +49,8 @@ let convertHorizontaly (input: string list) =
         ]) |> toStringNumber))
 
 let convertVerticallyAndHorizontally (input: string list) =
-  let ocrRows = input.Length / 4 - 1
-  ("", [0..ocrRows])
+  let ocrLinesCount = input.Length / 4 - 1
+  ("", [0..ocrLinesCount])
     ||> List.fold (fun state iterationNo ->
       let takeFrom = iterationNo * 4
       let takeTo = iterationNo * 4 + 3
