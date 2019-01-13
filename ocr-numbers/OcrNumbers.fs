@@ -37,8 +37,8 @@ let validate (input: string list) =
     | _ -> Error "Incorrect input"
 
 let convertHorizontaly (input: string list) =
-  let columnsToConvert = (input.[0].Length / 3 - 1)
-  ("", [0..columnsToConvert])
+  let ocrNumbersCount = (input.[0].Length / 3 - 1)
+  ("", [0..ocrNumbersCount])
     ||> List.fold (fun state iterationNo ->
       let takeFrom = iterationNo * 3
       let takeTo = iterationNo * 3 + 2
@@ -49,8 +49,8 @@ let convertHorizontaly (input: string list) =
         ]) |> toStringNumber))
 
 let convertVerticallyAndHorizontally (input: string list) =
-  let rowsToConvert = input.Length / 4 - 1
-  ("", [0..rowsToConvert])
+  let ocrRows = input.Length / 4 - 1
+  ("", [0..ocrRows])
     ||> List.fold (fun state iterationNo ->
       let takeFrom = iterationNo * 4
       let takeTo = iterationNo * 4 + 3
